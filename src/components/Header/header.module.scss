@@ -1,0 +1,17 @@
+header {
+    width: 90vw;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 24px;
+}
+
+.logo {
+    height: 68px;
+}
+
+.links {
+    display: flex;
+    gap: 5vw;
+}
