@@ -1,0 +1,56 @@
+@import "../../styles/variables.scss";
+
+.homeBanner {
+  width: 90vw;
+  height: 223px;
+  position: absolute;
+  border-radius: 16px;
+  background-color: $home-banner-darken;
+  @media (max-width: 600px) {
+    height: 100px;
+  }
+}
+
+h1 {
+  margin: 0;
+  height: 223px;
+  font-size: 48px;
+  font-weight: 700;
+  color: $light;
+  opacity: 1;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+    padding-left: 16px;
+  @media (max-width: 600px) {
+justify-content: start;
+text-align: left;
+    height: 100px;
+    font-size: 24px;
+
+  }
+}
+
+.gallery {
+  width: 90vw;
+  display: grid;
+  padding: 45px;
+  gap: 45px;
+  margin-bottom: 45px;
+  background-color: $grey;
+  border-radius: 16px;
+  box-sizing: border-box;
+  grid-template-columns: repeat(3, 1fr);
+  @media (max-width: 900px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 600px) {
+    background-color: $light;
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 22px;
+    margin-bottom: 22px;
+    padding: 0px;
+    gap: 22px;
+  }
+}

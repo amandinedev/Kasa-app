@@ -1,0 +1,12 @@
+@import "../../styles/variables.scss";
+
+.aProposBanner{
+    width: 90vw;
+    height: 223px;
+    position: absolute;
+    border-radius: 16px;
+    background-color:$a-propos-banner-darken;
+    @media (max-width: 600px){
+        height: 100px;
+    }
+}

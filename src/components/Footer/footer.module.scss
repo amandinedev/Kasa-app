@@ -1,16 +1,35 @@
+@import "../../styles/variables.scss";
+
 footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: white;
-    background-color: black;
-    height: 200px;
-    font-size: 24px;
-    padding-top: 60px;
+    color: $light;
+    background-color: $dark;
+    height: 209px;
+    width: 100vw;
+    position: absolute;
+    left: 0;
     box-sizing: border-box;
-}
+    font-size: 24px;
+    padding-top: 45px;
+    gap: 22px;
+    @media (max-width: 600px){
+        padding-top: 0px;
+    }
 
-.logoSmall {
+    .logoSmall {
     height: 39.44px;
+    }
+
+    .rights{
+        text-align: center;
+        width: 100vw;
+        font-size: 1em;
+        @media (max-width: 600px){
+            font-size: 0.5em;
+            width: 35vw;
+        }
+    }
 }

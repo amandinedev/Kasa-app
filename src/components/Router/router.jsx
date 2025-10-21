@@ -1,10 +1,10 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Home from '../../pages/Home/';
-import APropos from '../../pages/APropos/index.jsx';
-import FicheLogement from '../../pages/FicheLogement/index.jsx';
-import Error404 from '../../pages/error404/index.jsx';
-import Layout from '../../components/Layout/';
+import Home from '../../pages/Home/home.jsx';
+import APropos from '../../pages/APropos/aPropos.jsx';
+import FicheLogement from '../../pages/FicheLogement/ficheLogement.jsx';
+import Error404 from '../../pages/error404/error404.jsx';
+import Layout from '../Layout/layout.jsx';
 
 function Router() {
   return (
