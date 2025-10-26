@@ -14,7 +14,7 @@ function Router() {
           <Route path="/" element={<Home />} />
           <Route path="/A-propos" element={<APropos />} />
           <Route path="/Fiche-logement/:id" element={<FicheLogement />} />
-          <Route path="/*" element={<Error404 />} />
+          <Route path="/*" element={<Error404 />} /> {/* This will catch all undefined routes */}
         </Routes>
       </Layout>
     </BrowserRouter>
