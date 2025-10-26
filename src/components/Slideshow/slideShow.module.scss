@@ -1,0 +1,44 @@
+@import '../../styles/variables.scss';
+
+.slideshowSection {
+  position: relative;
+  width: 90vw;
+  height: 38vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slideImage {
+  width: 100%;
+  object-fit: cover;
+  display: flex;
+  justify-content: center;
+  @media (max-width: 600px) {
+    width: auto;
+    height: 100%;
+  }
+}
+
+.navButton {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 19vh;
+  transform: translateY(-50%);
+}
+  .backButton {
+    left: 1vw;
+  }
+  .forwardButton {
+    right: 1vw;
+  }
+  .arrowIcon {
+    width: 10vw;
+    @media (max-width: 600px) {
+      width: 5.5vw;
+    }
+  }
+

@@ -17,7 +17,7 @@ return(
         <Banner imageSource={bannerHome} />
         <div className={styles.gallery}>
                 {logementsData.map(logement => (
-                    <Card key={logement.id} title={logement.title} cover={logement.cover} />
+                    <Card key={logement.id} id={logement.id} title={logement.title} cover={logement.cover} />
                 ))}
         </div>
     </div>

@@ -28,7 +28,7 @@ function APropos() {
     <div>
       <div className={styles.aProposBanner}></div>
       <Banner imageSource={bannerAPropos} />
-      <div className={styles.collapsible}>
+      <div className={styles.collapsibleSection}>
         {data.map((item, index) => (
           <Collapsible key={index} title={item.title} content={item.content} />
         ))}

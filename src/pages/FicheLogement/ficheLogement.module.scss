@@ -1,0 +1,23 @@
+@import '../../styles/variables.scss';
+
+.logementSection{
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  @media (max-width: 600px) {
+    gap: 27px
+  }
+}
+
+    .collapsibleSection{
+        display: flex;
+        flex-direction: row;
+        width: 90vw;
+        gap: 76px;
+        margin:auto;
+          @media (max-width: 600px) {
+    flex-direction: column;
+        justify-content: center;
+        gap: 0px;
+  }
+    }
