@@ -1,0 +1,32 @@
+@import "../../styles/variables.scss";
+
+.hostContainer{
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+    height: 64px;
+         @media (max-width: 600px){
+        height: 32px;
+      }
+    .hostFullName{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: end;
+        gap: 5px;
+        font-size:1.125em ;
+        font-weight: 500;
+        color: $main-color;
+             @media (max-width: 600px){
+        font-size: 0.75em;
+      }
+    }
+}
+
+.hostPicture{
+    border-radius: 180px;
+    height: 64px;
+         @media (max-width: 600px){
+        height: 32px;
+      }
+}

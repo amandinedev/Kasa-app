@@ -1,10 +1,32 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './slideshow.module.scss';
 import arrowForward from '../../assets/arrow-forward.svg';
 import arrowBack from '../../assets/arrow-back.svg';
 
 function SlideShow({pictures}){
      const [currentIndex, setCurrentIndex] = useState(0);
+    const [isPortrait, setIsPortrait] = useState(false);
+
+    
+  // Function to check if the image is portrait or landscape
+  const checkImageOrientation = (src) => {
+    const img = new Image();
+    img.src = src;
+    return new Promise((resolve) => {
+      img.onload = () => {
+        resolve(img.height > img.width);
+      };
+    });
+  };
+
+  useEffect(() => {
+    if (pictures.length > 0 && pictures[currentIndex]) {
+      checkImageOrientation(pictures[currentIndex]).then(orientation => {
+        setIsPortrait(orientation);
+      });
+    }
+  }, [currentIndex, pictures]);
+
 
   const nextPicture = () => {
     if (pictures.length === 1) return;
@@ -20,7 +42,11 @@ function SlideShow({pictures}){
     <div className={styles.slideshowSection}>
       {pictures.length > 0 && (
         <>
-          <img className={styles.slideImage} src={pictures[currentIndex]} alt={`Slide ${currentIndex}`} />
+          <img className={`{styles.slideImage} 
+          ${isPortrait ? styles.portrait : styles.landscape}`}
+          src={pictures[currentIndex]} 
+          alt={`Slide ${currentIndex}`} />
+          <div className={styles.overlayText}>{`${currentIndex + 1}/${pictures.length}`}</div>
           {pictures.length > 1 && (
             <>
               <button onClick={previousPicture} className={`${styles.navButton} ${styles.backButton}`}>

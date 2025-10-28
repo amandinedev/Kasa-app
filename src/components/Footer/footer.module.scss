@@ -12,11 +12,11 @@ footer {
     position: absolute;
     left: 0;
     box-sizing: border-box;
-    font-size: 24px;
-    padding-top: 45px;
-    gap: 22px;
+    font-size: 1.5em;
+    padding-top: 3.5vh;
+    gap: 1.71vh;
     @media (max-width: 600px){
-        padding-top: 0px;
+        padding-top: 0;
     }
 
     .logoSmall {

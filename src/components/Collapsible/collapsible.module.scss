@@ -4,12 +4,20 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 90vw;
+  width: 100%;
   margin-bottom: 30px;
   box-sizing: border-box;
   overflow: hidden;
   @media (max-width: 600px) {
-    margin-bottom: 20px;
+    margin-bottom: 19px;
+  }
+
+  &.open { 
+    margin-bottom: 25px; 
+
+    @media (max-width: 600px) {
+      margin-bottom: 14px;
+    }
   }
 }
 
@@ -19,12 +27,13 @@
   justify-content: space-between;
   align-items: center;
   background-color: $main-color;
-  padding: 10px 20px;
+  padding: 10px 20px 10px 15px;
   border-radius: 5px;
   width: 100%;
   height: 52px;
   @media (max-width: 600px) {
     height: 30px;
+    padding: 10px;
   }
 }
 
@@ -47,8 +56,11 @@
   -webkit-appearance: none; /* Remove default button styling in Safari/Chrome */
 }
 .arrow {
-  width: 24px;
+  width: 32px;
   transition: transform 0.2s ease-in-out;
+   @media (max-width: 600px) {
+    width: 16px;
+  }
 }
 
 .arrow.open {
@@ -59,14 +71,15 @@
   position: relative;
   z-index: -1;
   width: 100%;
+  height: auto;
   overflow: hidden;
-  padding: 0 20px;
+  padding: 0px;
   max-height: 0;
   opacity: 0;
   transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out,
-    transform 0.3s ease-in-out;
-  background-color: $light-grey;
-  border-radius: 0 5px 5px 0;
+  transform 0.3s ease-in-out;
+  background-color: $grey;
+  border-radius: 5px;
   font-size: 1em;
   @media (max-width: 600px) {
     font-size: 0.542em;
@@ -74,11 +87,20 @@
 }
 
 .content.visible {
+
   max-height: 300px;
   overflow-y: auto;
-  padding: 20px;
+  padding: 15px 10px 10px 10px;
   opacity: 1;
-  transform: translateY(0); /* No translation when open */
+  transform: translateY(-5px); /* No translation when open */
+     ul {
+    list-style-type: none;
+  }
+
+  li {
+    list-style-type: none;
+    margin-bottom: 5px;
+  }
 }
 
 .content.collapsed {

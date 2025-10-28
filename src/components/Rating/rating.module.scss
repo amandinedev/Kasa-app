@@ -1,0 +1,24 @@
+@import '../../styles/variables.scss';
+
+.ratingContainer {
+  display: flex;
+  height: 36px;
+  @media (max-width: 600px) {
+    height: 18px;
+  }
+}
+
+.filledStar {
+  height: 36px;
+  color: $main-color;
+  @media (max-width: 600px) {
+    height: 18px;
+  }
+}
+.emptyStar {
+  height: 36px;
+  color: $grey;
+  @media (max-width: 600px) {
+    height: 18px;
+  }
+}

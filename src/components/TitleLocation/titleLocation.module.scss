@@ -1,0 +1,22 @@
+@import '../../styles/variables.scss';
+
+.titleLocationContainer {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  h2 {
+    font-size: 2.25em;
+    font-weight: 500;
+    padding-bottom: 7px;
+    color: $main-color;
+    @media (max-width: 600px) {
+      font-size: 1.125em;
+    }
+  }
+  p {
+    font-size: 1.125em;
+    @media (max-width: 600px) {
+      font-size: 0.875em;
+    }
+  }
+}

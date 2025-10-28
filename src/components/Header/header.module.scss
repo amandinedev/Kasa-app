@@ -1,16 +1,18 @@
 @import "../../styles/variables.scss";
 
 header {
-    width: 90vw;
-    height: 68px;
+    width: 86vw;
+    margin: auto;
+    height: 5.3vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: 24px;
-    margin-bottom: 45px;
+    font-size: 1.5em;
+    margin-bottom: 38px;
     @media (max-width: 600px){
         height: 46.88px;
-        margin-bottom: 22px;
+        margin-bottom: 19px;
+        font-size: 0.75em;
     }
 }
 

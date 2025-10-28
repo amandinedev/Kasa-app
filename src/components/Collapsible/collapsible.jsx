@@ -7,7 +7,7 @@ const Collapsible = ({ title, content }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className={styles.collapsibleContainer}>
+    <div className={`${styles.collapsibleContainer} ${isOpen ? styles.open : ''}`}>
       <div className={styles.collapsible}>
         <h2 className={styles.collapsibleTitle}>{title}</h2>
         <button className={styles.collapsibleButton} onClick={() => setIsOpen(!isOpen)}>
