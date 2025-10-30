@@ -8,27 +8,22 @@ const Collapsible = ({ title, content }) => {
 
   return (
     <div className={`${styles.collapsibleContainer} ${isOpen ? styles.open : ''}`}>
-      <div className={styles.collapsible}>
-        <h2 className={styles.collapsibleTitle}>{title}</h2>
-        <button className={styles.collapsibleButton} onClick={() => setIsOpen(!isOpen)}>
-        <img className={`${styles.arrow} ${isOpen ? styles.open : ''}`} src={chevron}></img>
+      <div className={`${styles.collapsible}`}>
+        <h2 className={`${styles.collapsibleTitle}`}>{title}</h2>
+        <button className={`${styles.collapsibleButton}`} onClick={() => setIsOpen(!isOpen)}>
+        <img className={`${styles.arrow} ${isOpen ? styles.open : ''}`} src={chevron} alt={`${isOpen ? 'open' : 'close'}`}></img>
       </button>
       </div>
       <div
         className={`${styles.content} ${isOpen ? styles.visible : styles.collapsed}`}
       >
-        <div className={styles.innercContent}>
+        <div className={`${styles.innercContent}`}>
           {content}
         </div>
       </div>
     </div>
   );
 };
-
-// Collapsible.propTypes = {
-//   title: PropTypes.string.isRequired,
-//   content: PropTypes.node.isRequired
-// };
 
 export default Collapsible;
 

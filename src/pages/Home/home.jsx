@@ -9,18 +9,20 @@ import Card from '../../components/Card/card';
 function Home(){
       const isMobile = window.innerWidth <= 600;
 return(
-    <div>
-        <div className={styles.homeBanner}>
+    <>
+    <main className={`${styles.sectionHome}`}>
+        <div className={`${styles.homeBanner}`}>
             <h1>Chez vous, {isMobile && <br />} 
             partout et ailleurs</h1>
         </div>
         <Banner imageSource={bannerHome} />
-        <div className={styles.gallery}>
+        <div className={`${styles.gallery}`}>
                 {logementsData.map(logement => (
                     <Card key={logement.id} id={logement.id} title={logement.title} cover={logement.cover} />
                 ))}
         </div>
-    </div>
+    </main>
+    </>
 );
 }
 

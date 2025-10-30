@@ -8,9 +8,9 @@ function Header() {
 
     return (
 
-        <header className={styles}>
-            <img className={styles.logo} src={kasaLogo} alt='logo kasa'></img>
-            <nav className={styles.links}>
+        <header className={`${styles}`} >
+            <img className={`${styles.logo}`}  src={kasaLogo} alt='logo kasa'></img>
+            <nav className={`${styles.links}`} >
 
                 <Link to="/">Accueil</Link>
 

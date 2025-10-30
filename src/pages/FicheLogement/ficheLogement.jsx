@@ -1,5 +1,5 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
 import styles from './ficheLogement.module.scss';
 import Collapsible from '../../components/Collapsible/collapsible';
 import SlideShow from '../../components/Slideshow/slideshow.jsx';
@@ -9,31 +9,39 @@ import HostInfo from '../../components/HostInfo/hostInfo.jsx';
 import Rating from '../../components/Rating/rating.jsx';
 import logementsData from '../../datas/logements.json';
 
-function FicheLogement() {
+function FicheLogement(debug=false) {
+  
     const { id } = useParams();
-  console.log('FicheLogement ID:', id);
+  if (debug==true) {console.log('FicheLogement ID:', id);}
+    // Log the JSON data to verify its contents
+  if (debug==true) {console.log('Logements Data:', logementsData);}
+    const navigate = useNavigate();
 
   // Filter the logement data based on the ID
   const logement = logementsData.find(logement => logement.id === id);
-  // if (!logement) {
-  //   return <div>Logement not found</div>;
-  // }
+  useEffect(() => {
+    if (!logement) {
+      navigate('/404');
+    }
+  }, [logement, navigate]);
+
   return (
-    <div className={styles.logementSection}>
-      <div className={styles.slideshowSection}>
+    <>
+    <main className={`${styles.logementSection}`}>
+      <section className={`${styles.slideshowSection}`}>
           <SlideShow pictures={logement.pictures} />
-      </div>
-      <div className={styles.infoSection}>
-        <div className={styles.infoContainer1}>
+      </section>
+      <section className={`${styles.infoSection}`}>
+        <div className={`${styles.infoContainer1}`}>
           <TitleLocation title={logement.title} location={logement.location} />
           <Tags tags={logement.tags} />
         </div>
-        <div className={styles.infoContainer2}>
+        <div className={`${styles.infoContainer2}`}>
            <HostInfo host={logement.host}/>
            <Rating rating={parseInt(logement.rating, 10)} />
         </div>
-       </div>
-      <div className={styles.collapsibleSection}>
+       </section>
+      <section className={`${styles.collapsibleSection}`}>
             <Collapsible title="Description" content={logement.description} />
             <Collapsible
               title="Équipements"
@@ -45,8 +53,9 @@ function FicheLogement() {
                 </ul>
               }
             />
-      </div>
-    </div>
+      </section>
+    </main>
+    </>
   );
 }
 

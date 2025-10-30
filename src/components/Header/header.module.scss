@@ -33,4 +33,10 @@ header {
         font-size: 12px;
         text-transform: uppercase;
     }
+    a{
+        border-radius: 5px;
+        &:focus-within {
+    outline: 4px solid $main-color; 
+  }
+}
 }

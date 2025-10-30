@@ -25,15 +25,18 @@ function APropos() {
         Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes.` },
   ];
   return (
-    <div>
-      <div className={styles.aProposBanner}></div>
+    <>
+    <main>
+      <h1 className={`${styles.aProposTitle}`}></h1>
+      <div className={`${styles.aProposBanner}`}></div>
       <Banner imageSource={bannerAPropos} />
-      <div className={styles.collapsibleSection}>
+      <div className={`${styles.collapsibleSection}`}>
         {data.map((item, index) => (
           <Collapsible key={index} title={item.title} content={item.content} />
         ))}
       </div>
-    </div>
+    </main>
+    </>
   );
 }
 

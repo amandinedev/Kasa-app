@@ -5,14 +5,14 @@ import emptyStar from '../../assets/emptyStar.svg'
 
 function Rating({ rating }) {
   const filledStars = Array.from({ length:  Math.min(rating, 5) }, (_, index) => (
-      <img key={index} src={filledStar} alt="Filled Star" className={styles.filledStar} />
+      <img key={index} src={filledStar} alt="Filled Star" className={`${styles.filledStar}`} />
   ));
   const emptyStars = Array.from({ length: 5 - rating }, (_, index) => (
-    <img key={index} src={emptyStar} alt="Empty Star" className={styles.emptyStar} />
+    <img key={index} src={emptyStar} alt="Empty Star" className={`${styles.emptyStar}`} />
   ));
 
   return (
-    <div className={styles.ratingContainer}>
+    <div className={`${styles.ratingContainer}`}>
       {filledStars}
       {emptyStars}
     </div>

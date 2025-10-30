@@ -50,12 +50,17 @@
   position: relative;
   z-index: 0;
   cursor: pointer;
+  border-radius: 5px;
   background: none;
   border: none;
   appearance: none; /* Remove default button styling in Firefox */
   -webkit-appearance: none; /* Remove default button styling in Safari/Chrome */
+  &:focus-visible, :focus-within {
+  outline: 3.5px solid $light; 
+  }
 }
 .arrow {
+ 
   width: 32px;
   transition: transform 0.2s ease-in-out;
    @media (max-width: 600px) {

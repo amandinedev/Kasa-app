@@ -7,12 +7,12 @@ function HostInfo({ host }) {
   const lastName = fullName.length > 1 ? fullName.slice(1).join(' ') : '';
 
   return (
-    <div className={styles.hostContainer}>
-      <div className={styles.hostFullName}>
-        <p className={styles.firstName}>{firstName}</p>
-        <p className={styles.lastName}>{lastName}</p>
+    <div className={`${styles.hostContainer}`}>
+      <div className={`${styles.hostFullName}`}>
+        <p className={`${styles.firstName}`}>{firstName}</p>
+        <p className={`${styles.lastName}`}>{lastName}</p>
       </div>
-      <img src={host.picture} alt={host.name} className={styles.hostPicture} />
+      <img src={host.picture} alt={host.name} className={`${styles.hostPicture}`} />
     </div>
   );
 }

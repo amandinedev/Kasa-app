@@ -49,6 +49,7 @@
       flex-direction: column;
       justify-content: space-between ;
          @media (max-width: 600px){
-  flex-direction: row-reverse;
+      flex-direction: row-reverse;
+      align-items: center;
       }
       }

@@ -19,20 +19,28 @@
 }
 
 .portrait {
-  width: auto;
-  height: 100%;
+  width: 100%;
+  height: auto;
+  min-width: 100%;
+  min-height: 100%;
   @media (max-width: 600px) {
     width: 100%;
     height: auto;
+    min-width: 100%;
+    min-height: 100%;
   }
 }
 
 .landscape {
-  width: 100%;
-  height: auto;
+  width: auto;
+  height: 100%;
+  min-height: 100%;
+  min-width: 100%;
   @media (max-width: 600px) {
     width: auto;
     height: 100%;
+    min-width: 100%;
+    min-height: 100%;
   }
 }
 
@@ -61,9 +69,15 @@
 }
 .backButton {
   left: 1vw;
+   &:focus-within {
+    outline: 4px solid $main-color; 
+  }
 }
 .forwardButton {
   right: 1vw;
+  &:focus-within {
+    outline: 4px solid $main-color; 
+  }
 }
 .arrowIcon {
   width: auto;
