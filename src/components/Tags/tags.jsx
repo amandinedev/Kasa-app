@@ -5,7 +5,9 @@ function Tags({ tags }) {
   return (
     <ul className={`${styles.tagsContainer}`}>
       {tags.map((tag, index) => (
-        <li key={index} className={`${styles.tag}`}>{tag}</li>
+        <li key={index} className={`${styles.tag}`}>
+          {tag}
+        </li>
       ))}
     </ul>
   );

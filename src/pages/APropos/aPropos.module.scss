@@ -1,9 +1,8 @@
 @import '../../styles/variables.scss';
 
-
 .aProposTitle {
-    height: 0px;
-    color: $light;
+  height: 0px;
+  color: $light;
 }
 
 .aProposBanner {
@@ -22,7 +21,7 @@
   width: 71vw;
   margin: auto;
   box-sizing: border-box;
-   @media (max-width: 600px) {
+  @media (max-width: 600px) {
     width: 86vw;
   }
 }

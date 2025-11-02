@@ -69,14 +69,14 @@
 }
 .backButton {
   left: 1vw;
-   &:focus-within {
-    outline: 4px solid $main-color; 
+  &:focus-within {
+    outline: 4px solid $main-color;
   }
 }
 .forwardButton {
   right: 1vw;
   &:focus-within {
-    outline: 4px solid $main-color; 
+    outline: 4px solid $main-color;
   }
 }
 .arrowIcon {

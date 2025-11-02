@@ -1,5 +1,5 @@
-@import "./variables.scss";
-*{
+@import './variables.scss';
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -8,16 +8,15 @@
   width: 100vw;
   height: 100vh;
   gap: 50px;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   font-weight: 500;
-  background-color:$main-bg-color;
+  background-color: $main-bg-color;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
 }
 
 a {
@@ -30,15 +29,14 @@ a:hover {
   text-decoration: underline;
 }
 
-body{
+body {
   min-width: 320px;
   height: auto;
   padding-top: 40px;
   padding-left: 5vw;
   padding-right: 5vw;
   box-sizing: border-box;
-    @media (max-width: 600px){
-        padding-top: 20px;
-    }
+  @media (max-width: 600px) {
+    padding-top: 20px;
+  }
 }
-

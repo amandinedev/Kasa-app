@@ -1,42 +1,42 @@
-@import "../../styles/variables.scss";
+@import '../../styles/variables.scss';
 
 header {
-    width: 86vw;
-    margin: auto;
-    height: 5.3vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 1.5em;
-    margin-bottom: 38px;
-    @media (max-width: 600px){
-        height: 46.88px;
-        margin-bottom: 19px;
-        font-size: 0.75em;
-    }
+  width: 86vw;
+  margin: auto;
+  height: 5.3vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.5em;
+  margin-bottom: 38px;
+  @media (max-width: 600px) {
+    height: 46.88px;
+    margin-bottom: 19px;
+    font-size: 0.75em;
+  }
 }
 
 .logo {
-    height: 68px;
-    @media (max-width: 600px){
-        height: 46.88px;
-    }
+  height: 68px;
+  @media (max-width: 600px) {
+    height: 46.88px;
+  }
 }
 
 .links {
-    display: flex;
-    align-items: center;
-    gap: 5vw;
-    text-align: center;
-    @media (max-width: 600px){
-        height: 46.88px;
-        font-size: 12px;
-        text-transform: uppercase;
-    }
-    a{
-        border-radius: 5px;
-        &:focus-within {
-    outline: 4px solid $main-color; 
+  display: flex;
+  align-items: center;
+  gap: 5vw;
+  text-align: center;
+  @media (max-width: 600px) {
+    height: 46.88px;
+    font-size: 12px;
+    text-transform: uppercase;
   }
-}
+  a {
+    border-radius: 5px;
+    &:focus-within {
+      outline: 4px solid $main-color;
+    }
+  }
 }

@@ -12,7 +12,11 @@ function HostInfo({ host }) {
         <p className={`${styles.firstName}`}>{firstName}</p>
         <p className={`${styles.lastName}`}>{lastName}</p>
       </div>
-      <img src={host.picture} alt={host.name} className={`${styles.hostPicture}`} />
+      <img
+        src={host.picture}
+        alt={host.name}
+        className={`${styles.hostPicture}`}
+      />
     </div>
   );
 }

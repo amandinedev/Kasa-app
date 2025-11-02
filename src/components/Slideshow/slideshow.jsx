@@ -48,8 +48,11 @@ function SlideShow({ pictures }) {
             src={pictures[currentIndex]}
             alt={`Slide ${currentIndex}`}
           />
-       {pictures.length > 1 && (
-            <div className={`${styles.overlayText}`}> {`${currentIndex + 1}/${pictures.length}`}</div>
+          {pictures.length > 1 && (
+            <div className={`${styles.overlayText}`}>
+              {' '}
+              {`${currentIndex + 1}/${pictures.length}`}
+            </div>
           )}
           {pictures.length > 1 && (
             <>

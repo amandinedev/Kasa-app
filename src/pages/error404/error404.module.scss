@@ -9,12 +9,11 @@
   padding: 40px 0 139px 0;
   width: 86vw;
   gap: 139px;
-    @media (max-width: 600px) {
+  @media (max-width: 600px) {
     padding: 20px 0 113px 0;
     gap: 113px;
   }
 }
-
 
 .errorTitle {
   color: $main-color;

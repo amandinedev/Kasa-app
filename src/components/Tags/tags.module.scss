@@ -18,11 +18,11 @@
     font-weight: 700;
     background-color: $main-color;
     border-radius: 15px;
-    @media (max-width: 600px){
+    @media (max-width: 600px) {
       font-size: 0.625em;
       height: 18px;
       padding: 16px auto;
       min-width: 84px;
+    }
   }
-}
 }
