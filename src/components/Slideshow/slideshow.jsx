@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types'; 
 import styles from './slideshow.module.scss';
 import arrowForward from '../../assets/arrow-forward.svg';
 import arrowBack from '../../assets/arrow-back.svg';
+
 
 function SlideShow({ pictures }) {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -83,5 +85,10 @@ function SlideShow({ pictures }) {
     </div>
   );
 }
+
+// validation des props
+SlideShow.propTypes = { 
+  pictures: PropTypes.arrayOf(PropTypes.string).isRequired,
+};
 
 export default SlideShow;

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './card.module.scss';
 import { useNavigate } from 'react-router-dom';
 
@@ -27,5 +28,12 @@ function Card({ id, title, cover }) {
     </div>
   );
 }
+
+// validation des props
+Card.propTypes = { 
+  id: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  cover: PropTypes.string.isRequired,
+};
 
 export default Card;

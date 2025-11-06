@@ -1,7 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types'; 
 import styles from './rating.module.scss';
 import filledStar from '../../assets/filledStar.svg';
 import emptyStar from '../../assets/emptyStar.svg';
+
 
 function Rating({ rating }) {
   const filledStars = Array.from(
@@ -31,5 +33,10 @@ function Rating({ rating }) {
     </div>
   );
 }
+
+// validation des props
+Rating.propTypes = { 
+  rating: PropTypes.number.isRequired,
+};
 
 export default Rating;

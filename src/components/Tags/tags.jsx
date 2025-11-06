@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './tags.module.scss';
+import PropTypes from 'prop-types'; 
 
 function Tags({ tags }) {
   return (
@@ -12,5 +13,10 @@ function Tags({ tags }) {
     </ul>
   );
 }
+
+// validation des props
+Tags.propTypes = { 
+  tags: PropTypes.arrayOf(PropTypes.string).isRequired,
+};
 
 export default Tags;

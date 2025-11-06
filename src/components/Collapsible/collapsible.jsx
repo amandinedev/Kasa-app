@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import styles from './collapsible.module.scss';
 import chevron from '../../assets/chevron.svg';
 
@@ -34,4 +35,9 @@ const Collapsible = ({ title, children }) => {
   );
 };
 
+// validation des props
+Collapsible.propTypes = { 
+  title: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
+};
 export default Collapsible;

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './hostInfo.module.scss';
 
 function HostInfo({ host }) {
@@ -20,5 +21,13 @@ function HostInfo({ host }) {
     </div>
   );
 }
+
+ // validation des props
+HostInfo.propTypes = {
+  host: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    picture: PropTypes.string.isRequired,
+  }).isRequired,
+};
 
 export default HostInfo;
