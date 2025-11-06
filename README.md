@@ -27,8 +27,9 @@ project-root/
 
 Before starting with this project, make sure you have the following installed on your machine:
 
-- Node.js (version 14.x or higher)
+- Node.js (Vite requires Node.js version 20.19+ or 22.12+)
 - npm (version 6.x or higher) or yarn
+
 ## Installation and Setup
 
 To install and set up the project locally:
