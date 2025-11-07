@@ -9,23 +9,11 @@ import HostInfo from '../../components/HostInfo/hostInfo.jsx';
 import Rating from '../../components/Rating/rating.jsx';
 import logementsData from '../../datas/logements.json';
 
-function FicheLogement(debug = false) {
-  //react router extract the ID from the URL
+function FicheLogement() {
   const { id } = useParams();
-  if (debug == true) {
-    console.log('FicheLogement ID:', id);
-  }
-  // Log the JSON data to verify its contents
-  if (debug == true) {
-    console.log('Logements Data:', logementsData);
-  }
-  // react router function programatically navigate to a different page
   const navigate = useNavigate();
-
-  // Initialize state using useState hook to keep track of the logement data
   const [logement, setLogement] = useState(null);
 
-  // useEffect hook will run when `id` changes, effectively fetching the logement based on its ID
   useEffect(() => {
     // search a logement with the matching ID in our data array
     const foundLogement = logementsData.find((logement) => logement.id === id);
@@ -37,10 +25,10 @@ function FicheLogement(debug = false) {
     else {
       setLogement(foundLogement);
     }
-  }, [id, navigate]); // Dependencies array: run this effect when id or navigate changes
+  }, [id, navigate]);
 
-    // If no logement data is ready yet, return a placeholder div to prevent errors in rendering
-  if (!logement) return <div></div>; 
+  // If no logement data is ready yet, return a placeholder div to prevent errors in rendering
+  if (!logement) return <div></div>;
 
   return (
     <>
